@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fdfbf7">
+    
+    <title>Roti Senja Jakarta - Kehangatan di Setiap Gigitan</title>
+    <meta name="description" content="Roti Senja Jakarta menyajikan roti klasik buatan tangan tanpa mesin. Cita rasa nostalgia Jakarta Selatan dengan bahan premium. Pesan online sekarang!">
+    <meta name="keywords" content="Roti Senja Jakarta, Roti Jadul Jakarta Selatan, Bakery Fatmawati, Roti Coklat Klasik, Roti Keju, Kuliner Jakarta Selatan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rotisenja.com/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Roti Senja Jakarta - Kehangatan di Setiap Gigitan">
+    <meta property="og:description" content="Roti klasik buatan tangan. Hangat, lembut, dan bikin kangen rumah.">
+    <meta property="og:url" content="https://rotisenja.com/">
+    <meta property="og:image" content="https://rotisenja.com/img/og-image.jpg">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Roti Senja Jakarta",
+      "image": "https://rotisenja.com/img/images.jpg",
+      "description": "Bakery artisan di Jakarta Selatan yang menyajikan roti jadul buatan tangan.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Fatmawati Raya",
+        "addressLocality": "Jakarta Selatan",
+        "addressRegion": "DKI Jakarta",
+        "postalCode": "12430",
+        "addressCountry": "ID"
+      },
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "15:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "22:00"
+        }
+      ],
+      "telephone": "+628123456789",
+      "menu": "https://rotisenja.com/menu.html"
+    }
+    </script>
+
+    <style>
+        :root {
+            /* Design System Colors */
+            --bg-paper: #fdfbf7;
+            --text-pencil: #2d2d2d;
+            --accent-red: #ff4d4d;
+            --accent-blue: #2d5da1;
+            --muted-paper: #e5e0d8;
+            --post-it-yellow: #fff9c4;
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-pencil);
+            font-family: 'Patrick Hand', cursive;
+            /* Dot Pattern Texture */
+            background-image: radial-gradient(var(--muted-paper) 1px, transparent 1px);
+            background-size: 24px 24px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Kalam', cursive;
+            font-weight: 700;
+        }
+
+        /* --- Custom Wobbly Utilities (Inti dari Design System) --- */
+        
+        /* Mengganti border radius standar Bootstrap dengan yang "penyok" */
+        .wobbly-box {
+            border: 3px solid var(--text-pencil);
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            background-color: white;
+            box-shadow: 4px 4px 0px 0px var(--text-pencil);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .wobbly-box:hover {
+            transform: rotate(-1deg) scale(1.02);
+            box-shadow: 6px 6px 0px 0px var(--text-pencil);
+        }
+
+        /* --- Navbar Style (Roti Sari Inspiration) --- */
+        .navbar {
+            background-color: white !important;
+            border-bottom: 3px solid var(--text-pencil);
+            padding: 1rem 0;
+            box-shadow: 0px 4px 0px rgba(45,45,45,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            color: var(--text-pencil) !important;
+            transform: rotate(-2deg);
+        }
+
+        .nav-link {
+            font-size: 1.25rem;
+            color: var(--text-pencil) !important;
+            margin: 0 10px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-red) !important;
+            text-decoration: underline wavy var(--accent-red);
+        }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            padding: 80px 0;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            transform: rotate(-1deg);
+        }
+
+        .hero-badge {
+            background-color: var(--post-it-yellow);
+            padding: 5px 15px;
+            border: 2px solid var(--text-pencil);
+            border-radius: 20px 255px 20px 255px / 255px 20px 255px 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            transform: rotate(2deg);
+        }
+
+        /* --- Button Customization --- */
+        .btn-senja {
+            background-color: white;
+            color: var(--text-pencil);
+            border: 3px solid var(--text-pencil);
+            border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+            padding: 10px 30px;
+            font-size: 1.5rem;
+            font-family: 'Patrick Hand', cursive;
+            box-shadow: 4px 4px 0px 0px var(--text-pencil);
+            transition: all 0.2s;
+        }
+
+        .btn-senja:hover {
+            background-color: var(--accent-red);
+            color: white;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px var(--text-pencil);
+        }
+
+        .btn-senja:active {
+            transform: translate(4px, 4px);
+            box-shadow: none;
+        }
+
+        /* --- Menu Cards --- */
+        .product-card {
+            height: 100%;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* Efek selotip (Tape) */
+        .tape {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
+            width: 120px;
+            height: 35px;
+            background-color: rgba(200, 200, 200, 0.5);
+            z-index: 10;
+        }
+
+        .price-tag {
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 5px 15px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50% 20% / 10% 40%;
+            border: 2px solid var(--text-pencil);
+            transform: rotate(-5deg);
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 3px dashed var(--text-pencil);
+            padding: 40px 0;
+            background-color: white;
+            margin-top: 60px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .navbar-brand { font-size: 1.5rem; }
+            /* Mematikan rotasi berlebih di mobile agar rapi */
+            .wobbly-box:hover { transform: none; }
+        }
+
+        /* ===============================
+        ANTI GOYANG KHUSUS MOBILE
+        =============================== */
+        @media (max-width: 768px) {
+            /* Matikan SEMUA transform */
+            *, *::before, *::after {
+                transform: none !important;
+                transition: none !important;
+            }
+
+            /* Matikan hover effect di mobile */
+            .wobbly-box:hover,
+            .btn-senja:hover,
+            .nav-link:hover {
+                transform: none !important;
+                box-shadow: 4px 4px 0px 0px var(--text-pencil) !important;
+            }
+
+            /* Hilangkan efek rotasi yang bikin layout geser */
+            .navbar-brand,
+            .hero-title,
+            .hero-badge,
+            .price-tag,
+            .tape {
+                transform: none !important;
+            }
+
+            /* Stabilkan gambar */
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            /* Kunci body supaya tidak bergeser */
+            body {
+                overflow-x: hidden;
+                position: relative;
+            }
+
+            /* Fix shadow yang bikin jitter */
+            .wobbly-box,
+            .btn-senja {
+                box-shadow: 3px 3px 0px 0px var(--text-pencil);
+            }
+        }
+
+        /* =======================================
+        MOBILE HARD STABILITY LOCK (ANTI GOYANG)
+        ======================================= */
+        @media (max-width: 768px) {
+            html, body {
+                width: 100%;
+                max-width: 100vw;
+                overflow-x: hidden !important;
+                overscroll-behavior: none;
+                touch-action: manipulation;
+            }
+
+            body {
+                position: fixed;
+                inset: 0;
+                height: 100vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
+
+            /* MATIKAN semua animasi & transform */
+            *, *::before, *::after {
+                animation: none !important;
+                transition: none !important;
+                transform: none !important;
+            }
+
+            /* Hapus efek coretan yang bikin layout geser */
+            .wobbly-box,
+            .btn-senja,
+            .navbar,
+            .product-card {
+                box-shadow: 2px 2px 0 var(--text-pencil) !important;
+            }
+
+            /* Font anti reflow */
+            body, h1, h2, h3, h4, h5, p, a {
+                -webkit-text-size-adjust: 100%;
+                text-size-adjust: 100%;
+            }
+
+            /* Fix navbar */
+            .navbar {
+                position: sticky;
+                top: 0;
+                width: 100%;
+                transform: translateZ(0);
+            }
+
+            /* Gambar tidak boleh mendorong layout */
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        /* --- FOOTER CUSTOM STYLES --- */
+        .footer-senja {
+            background-color: white;
+            border-top: 4px solid var(--text-pencil);
+            padding: 60px 0 30px 0;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        /* Dekorasi garis zigzag di atas footer */
+        .footer-senja::before {
+            content: "";
+            position: absolute;
+            top: -12px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10L10 2L20 10L30 2L40 10' stroke='%232d2d2d' stroke-width='3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        .footer-title {
+            font-family: 'Kalam', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 2px dashed var(--accent-red);
+        }
+
+        .footer-link {
+            display: block;
+            color: var(--text-pencil);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-blue);
+            transform: translateX(5px) rotate(-2deg);
+            text-decoration: line-through var(--accent-red); /* Efek coretan unik */
+        }
+
+        .social-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--text-pencil);
+            border-radius: 50% 40% 60% 45% / 45% 60% 40% 55%; /* Wobbly circle */
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--text-pencil);
+            transition: all 0.2s;
+        }
+
+        .social-circle:hover {
+            background-color: var(--post-it-yellow);
+            transform: scale(1.1) rotate(10deg);
+        }
+
+        @media (max-width: 768px) {
+            .footer-senja {
+                text-align: center;
+                padding-top: 40px;
+            }
+            .footer-title {
+                margin-top: 30px;
+            }
+        }
+        
+        /* --- FAB (Floating Action Button) Styles --- */
+        .fab-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Jarak antara WA dan Top */
+            align-items: center;
+        }
+
+        .fab-btn {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid white;
+            text-decoration: none;
+        }
+
+        .fab-btn:hover {
+            transform: scale(1.15);
+        }
+
+        /* Tombol Top (Hitam) */
+        .fab-top {
+            background: #2d2d2d;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .fab-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        /* Tombol WA (Hijau) */
+        .fab-wa {
+            background: #25D366;
+        }
+
+        .fab-btn svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Screen Reader Only */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Override anti-goyang untuk FAB supaya tetap fixed */
+        @media (max-width: 768px) {
+             .fab-container {
+                position: fixed !important;
+                bottom: 20px !important; 
+                right: 20px !important;
+                z-index: 10000 !important;
+             }
+             .fab-btn {
+                /* Kembalikan shadow di mobile jika di-reset global */
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;
+                transform: none !important; /* Nonaktifkan bounce di mobile */
+             }
+        }
+    </style>
+</head>
+<body>
+
+     <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                Roti Senja <span style="color: var(--accent-red)">Jakarta</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: 2px solid var(--text-pencil);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu2.html">Menu Andalan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lokasi.html">Lokasi</a></li>
+                    <li class="nav-item">
+                        <a href="pesan.html" class="btn btn-senja ms-3 py-1 px-3 fs-5">Pesan Online</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="beranda" class="hero-section container">
+        <div class="row align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-6 text-center text-md-start mt-4 mt-md-0">
+                <div class="hero-badge">Sejak 2024</div>
+                <h1 class="hero-title mb-4">Rotinya Lembut,<br>Seperti Langit <span style="color: var(--accent-red); text-decoration: underline wavy;">Senja</span></h1>
+                <p class="fs-4 mb-5">Dibuat dengan tangan, tanpa mesin otomatis. Cita rasa klasik Jakarta Selatan yang bikin kangen rumah.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+                    <a href="menu.html" class="btn btn-senja">Lihat Menu</a>
+                    <a href="cerita.html" class="btn btn-senja" style="background-color: var(--muted-paper);">Cerita Kami</a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="wobbly-box p-3 d-inline-block" style="transform: rotate(2deg);">
+                    <img src="img/images.jpg" alt="Roti Senja Signature Jakarta Selatan" class="img-fluid" width="600" height="400" fetchpriority="high" style="border-radius: 4px; border: 2px solid var(--text-pencil);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="display-4" style="transform: rotate(-1deg);">Menu Favorit</h2>
+            <p class="fs-5">Dipanggang dadakan setiap sore.</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-4">
+                <div class="wobbly-box product-card">
+                    <div class="tape"></div>
+                    <img src="img/coklat roti.jpg" alt="Roti Coklat Klasik Lumer" class="img-fluid mb-3 w-100" width="400" height="300" loading="lazy" style="border: 2px solid var(--text-pencil); border-radius: 10px;">
+                    <h3>Roti Coklat Klasik</h3>
+                    <p>Isian coklat lumer dengan adonan roti jadul yang padat tapi lembut.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price-tag">Rp 12.000</span>
+                        <button class="btn p-0" style="color: var(--accent-red);">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="wobbly-box product-card" style="background-color: var(--post-it-yellow);">
+                    <div class="tape"></div>
+                     <img src="img/Roti Keju.jpg" alt="Roti Keju Cheddar Melimpah" class="img-fluid mb-3 w-100" width="400" height="300" loading="lazy" style="border: 2px solid var(--text-pencil); border-radius: 10px;">
+                    <h3>Roti Keju Gondrong</h3>
+                    <p>Taburan keju cheddar melimpah luar dalam. Gurihnya pas!</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price-tag">Rp 15.000</span>
+                        <button class="btn p-0" style="color: var(--accent-red);">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="wobbly-box product-card">
+                    <div class="tape"></div>
+                     <img src="img/Srikaya Pandan.jpg" alt="Roti Srikaya Pandan Wangi" class="img-fluid mb-3 w-100" width="400" height="300" loading="lazy" style="border: 2px solid var(--text-pencil); border-radius: 10px;">
+                    <h3>Srikaya Pandan</h3>
+                    <p>Selai srikaya buatan sendiri dengan pandan asli. Wangi banget.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="price-tag">Rp 14.000</span>
+                        <button class="btn p-0" style="color: var(--accent-red);">+ Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-5">
+        <div class="wobbly-box p-5 text-center" style="border-radius: 20px 255px 20px 255px / 255px 20px 255px 20px; border-style: dashed;">
+            <h2 class="mb-4">Apa Kata Tetangga?</h2>
+            <figure>
+                <blockquote class="blockquote">
+                    <p class="fs-3 fst-italic">"Roti Senja ngingetin gue sama bekal sekolah jaman SD dulu. Coklatnya gak pelit!"</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mt-2" style="font-family: 'Patrick Hand'; font-size: 1.2rem; color: var(--accent-blue);">
+                    Budi, Anak Jakarta Selatan
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <footer class="footer-senja">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <h2 class="footer-title">Roti Senja Jakarta</h2>
+                    <p class="fs-5">Menghadirkan kehangatan di setiap gigitan sejak 2024. Dipanggang manual dengan cinta di dapur kecil kami di Fatmawati.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-circle" aria-label="Instagram">Ig</a>
+                        <a href="#" class="social-circle" aria-label="Twitter">Tw</a>
+                        <a href="#" class="social-circle" aria-label="WhatsApp">Wa</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                    <h3 class="h4 hand-font mb-4">Mampir Yuk!</h3>
+                    <nav>
+                        <a href="index.html" class="footer-link">Beranda</a>
+                        <a href="menu.html" class="footer-link">Menu Andalan</a>
+                        <a href="cerita.html" class="footer-link">Cerita Kami</a>
+                        <a href="lokasi.html" class="footer-link">Lokasi Toko</a>
+                    </nav>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                    <div class="wobbly-box p-4" style="background: var(--post-it-yellow); transform: rotate(1deg);">
+                        <h3 class="h4 hand-font mb-3">Jam Panggang:</h3>
+                        <ul class="list-unstyled fs-5">
+                            <li class="d-flex justify-content-between">
+                                <span>Senin - Jumat</span>
+                                <span>15:00 - 21:00</span>
+                            </li>
+                            <li class="d-flex justify-content-between border-top border-dark mt-2 pt-2">
+                                <span>Sabtu - Minggu</span>
+                                <span>10:00 - 22:00</span>
+                            </li>
+                        </ul>
+                        <p class="small mt-3 mb-0 text-center fw-bold">*Atau sampai habis!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0 fs-6">© 2024 Roti Senja Jakarta. Dibuat dengan <strong>Tepung & Doa</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fab-container">
+        
+        <div class="fab-btn fab-top" id="backToTop" onclick="backToTop()" role="button" aria-label="Kembali ke atas">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19V5" />
+                <path d="M5 12l7-7 7 7" />
+            </svg>
+        </div>
+
+        <a href="https://wa.me/628123456789?text=Halo%20Roti%20Senja%2C%20saya%20ingin%20bertanya" 
+           target="_blank" 
+           rel="noopener" 
+           class="fab-btn fab-wa" 
+           aria-label="Chat WhatsApp">
+            <svg viewBox="0 0 512 512" width="28" height="28" aria-hidden="true" focusable="false">
+                <path fill="#FFFFFF" d="M256 32C132.3 32 32 128.9 32 248c0 50.6 18.1 97.3 48.3 134.2L48 480l101.6-30.1c33.4 18.3 71.8 28.7 112.4 28.7 123.7 0 224-96.9 224-216.6S379.7 32 256 32z"/>
+                <path fill="#25D366" d="M256 64c-105.9 0-192 83.6-192 184 0 46.3 18.2 89.4 48.4 121.6L96 416l50.5-14.7C177.6 420.8 215.8 432 256 432c105.9 0 192-83.6 192-184S361.9 64 256 64z"/>
+                <path fill="#FFFFFF" d="M341.6 299.2c-5.2-2.6-30.6-15-35.3-16.7-4.7-1.7-8.1-2.6-11.5 2.6-3.4 5.2-13.3 16.7-16.3 20.1-3 3.4-6 3.9-11.2 1.3-30.6-15-50.6-26.8-70.7-60.8-5.2-8.9 5.2-8.3 15-28.2 1.7-3.4.9-6.5-.4-9.1-1.3-2.6-11.5-27.4-15.8-37.6-4.3-10.4-8.7-9.1-11.5-9.1-3 0-6.5-.4-10-.4s-9.1 1.3-13.9 6.5c-4.8 5.2-18.3 17.9-18.3 43.7s18.7 50.8 21.3 54.2c2.6 3.4 36.9 56.3 89.5 78.9 12.5 5.4 22.3 8.6 29.9 11 12.6 4 24.1 3.4 33.2 2.1 10.1-1.5 30.6-12.5 34.9-24.6 4.3-12.1 4.3-22.5 3-24.6-1.3-2.1-4.7-3.4-9.9-6z"/>
+            </svg>
+            <span class="sr-only">Chat WhatsApp Roti Senja</span>
+        </a>
+
+    </div>
+
+    <script>
+        // Optimize Scroll Listener with Debounce concept (Simplified)
+        const topBtn = document.getElementById("backToTop");
+        
+        window.addEventListener("scroll", () => {
+            // Show button after scrolling down 300px
+            if (window.scrollY > 300) {
+                topBtn.classList.add("show");
+            } else {
+                topBtn.classList.remove("show");
+            }
+        }, { passive: true }); // Passive listener for scrolling performance
+
+        function backToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

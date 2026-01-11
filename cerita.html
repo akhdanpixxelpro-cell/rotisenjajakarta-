@@ -12,7 +12,7 @@
 
       <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 Roti Senja <span style="color: var(--accent-red)">Jakarta</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: 2px solid var(--text-pencil);">
@@ -44,7 +44,7 @@
         <div class="row g-5 align-items-center">
             <div class="col-md-5">
                 <div class="polaroid">
-                    <img src="https://placehold.co/500x600/e5e0d8/2d2d2d?text=Foto+Dapur+Tua" alt="Dapur Roti Senja">
+                    <img src="img/rotisenj.jpeg" alt="Dapur Roti Senja">
                     <p class="text-center mt-3 mb-0" style="font-family: 'Kalam';">Dapur pertama kami, 2024</p>
                 </div>
             </div>
@@ -321,6 +321,60 @@ h1, h2, h3, .navbar-brand {
     transform: none !important;
   }
 }
+/* =========================
+   POLAROID IMAGE RESPONSIVE
+========================= */
+.polaroid {
+    background: #fff;
+    padding: 12px 12px 22px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    max-width: 100%;
+    margin: auto;
+    transform: rotate(-2deg);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;          /* Biar foto konsisten */
+    object-fit: cover;           /* Crop rapi */
+    border-radius: 6px;
+    display: block;
+}
+
+/* Caption polaroid */
+.polaroid p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+    .polaroid {
+        max-width: 420px;
+    }
+}
+
+/* Mobile layout fix */
+@media (max-width: 767px) {
+    .polaroid {
+        transform: rotate(0deg);
+        max-width: 100%;
+    }
+
+    .story-line {
+        text-align: center;
+    }
+
+    .story-line h2 {
+        font-size: 1.8rem;
+    }
+
+    .story-line p {
+        font-size: 1rem;
+    }
+}
 
     </style>
 
@@ -329,8 +383,8 @@ h1, h2, h3, .navbar-brand {
             <h2 class="mb-4">Ingin Menjadi Bagian dari Cerita Kami?</h2>
             <p class="fs-5 mb-4">Mampir ke toko kecil kami atau pesan untuk dinikmati bersama keluarga sore ini.</p>
             <div class="d-flex gap-3 justify-content-center">
-                <a href="menu.html" class="btn btn-senja">Pesan Sekarang</a>
-                <a href="index.html#lokasi" class="btn btn-senja" style="background: var(--accent-blue); color: white;">Lihat Lokasi</a>
+                <a href="pesan.html" class="btn btn-senja">Pesan Sekarang</a>
+                <a href="lokasi.html" class="btn btn-senja" style="background: var(--accent-blue); color: white;">Lihat Lokasi</a>
             </div>
         </div>
     </section>

@@ -552,6 +552,20 @@
   }
 }
 
+.roti-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 2px solid var(--text-pencil);
+  display: block;
+}
+
+/* Proteksi agar tidak ada CSS lain merusak ukuran */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
     </style>
 </head>
 <body>
@@ -578,7 +592,6 @@
         </div>
     </nav>
 
-    
     <section id="beranda" class="hero-section container">
         <div class="row align-items-center flex-column-reverse flex-md-row">
             <div class="col-md-6 text-center text-md-start mt-4 mt-md-0">
@@ -590,18 +603,21 @@
                     <a href="cerita.html" class="btn btn-senja" style="background-color: var(--muted-paper);">Cerita Kami</a>
                 </div>
             </div>
-            <div class="col-md-6 text-center">
-                <div class="wobbly-box p-3 d-inline-block" style="transform: rotate(2deg);">
-                   <img src="img/images.jpg"
-     alt="Roti Senja Signature Jakarta Selatan"
-     width="600"
-     height="400"
-     loading="eager"
-     decoding="async"
-     fetchpriority="high"
-     class="img-fluid"
-     style="border-radius:4px;border:2px solid var(--text-pencil);">
-                </div>
+           <div class="col-md-6 text-center">
+  <div class="wobbly-box p-3 d-inline-block" style="transform: rotate(2deg);">
+
+    <img 
+      src="img/senja.jpg"
+      alt="Roti Senja Signature Jakarta Selatan"
+      width="372"
+      height="305"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="img-fluid"
+      style="max-width:100%;height:auto;border-radius:4px;border:2px solid var(--text-pencil);"
+    >
+  </div>
             </div>
         </div>
     </section>

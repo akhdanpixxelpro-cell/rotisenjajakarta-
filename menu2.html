@@ -48,7 +48,13 @@
                         <p class="fs-5">Coklat Belgia yang meleleh saat digigit. Adonan rotinya difermentasi 12 jam untuk kelembutan maksimal.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <span class="scribble-price">Rp 15.000</span>
-                            <a href="pesan.html" class="btn btn-senja">Bungkus!</a>
+                            <button class="btn btn-senja"
+ data-bs-toggle="modal"
+ data-bs-target="#paymentModal"
+ data-produk="Roti Coklat Lumer"
+ data-harga="15000">
+ Bungkus!
+</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +69,13 @@
                         <p class="fs-5">Perpaduan keju gurih di dalam dan kerak keju kering di luar. Seperti makan awan yang gurih!</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <span class="scribble-price">Rp 18.000</span>
-                            <a href="pesan.html" class="btn btn-senja">Bungkus!</a>
+                            <button class="btn btn-senja"
+ data-bs-toggle="modal"
+ data-bs-target="#paymentModal"
+ data-produk="Double Cheese Pillow"
+ data-harga="18000">
+ Bungkus!
+</button>
                         </div>
                     </div>
                 </div>
@@ -77,7 +89,13 @@
                         <p class="fs-5">Topping abon yang melimpah dengan saus mayo rahasia Senja. Gurih, manis, dan sedikit nendang.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <span class="scribble-price">Rp 16.500</span>
-                            <a href="pesan.html" class="btn btn-senja">Bungkus!</a>
+                            <button class="btn btn-senja"
+ data-bs-toggle="modal"
+ data-bs-target="#paymentModal"
+ data-produk="Abon Sapi Pedas"
+ data-harga="16500">
+ Bungkus!
+</button>
                         </div>
                     </div>
                 </div>
@@ -91,13 +109,41 @@
                         <p class="fs-5">Kopi susu gula aren dengan racikan biji kopi lokal. Teman paling pas buat makan roti sore-sore.</p>
                         <div class="d-flex justify-content-between align-items-center mt-3">
                             <span class="scribble-price">Rp 20.000</span>
-                            <a href="pesan.html" class="btn btn-senja">Bungkus!</a>
+                            <button class="btn btn-senja"
+ data-bs-toggle="modal"
+ data-bs-target="#paymentModal"
+ data-produk="Es Kopi Senja Jkt"
+ data-harga="20000">
+ Bungkus!
+</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content wobbly-box">
+      <div class="modal-header">
+        <h5 class="modal-title hand-font">Pilih Metode Pembayaran</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p id="produkDipilih" class="fw-bold fs-5 mb-4"></p>
+
+        <div class="d-grid gap-3">
+          <a id="cash" class="btn btn-senja">💵 Bayar di Tempat</a>
+          <a id="transfer" class="btn btn-senja">🏦 Transfer Bank</a>
+          <a id="ewallet" class="btn btn-senja">📱 E-Wallet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <style>
         /* MASTER STYLE - ROTI SENJA JAKARTA 
@@ -358,6 +404,31 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
 }
 
     </style>
+
+    <script>
+const modal = document.getElementById("paymentModal");
+
+modal.addEventListener("show.bs.modal", function (event) {
+  const btn = event.relatedTarget;
+  const produk = btn.getAttribute("data-produk");
+  const harga = btn.getAttribute("data-harga");
+
+  document.getElementById("produkDipilih").innerText =
+    produk + " – Rp " + harga;
+
+  const text = `Halo Roti Senja 🍞%0ASaya mau pesan:%0A${produk}%0AHarga: Rp ${harga}`;
+
+  document.getElementById("cash").href =
+    `https://wa.me/6282211221909?text=${text}%0AMetode: Bayar di Tempat`;
+
+  document.getElementById("transfer").href =
+    `https://wa.me/6282211221909?text=${text}%0AMetode: Transfer Bank`;
+
+  document.getElementById("ewallet").href =
+    `https://wa.me/6282211221909?text=${text}%0AMetode: E-Wallet`;
+});
+</script>
+
 
      <footer class="footer-senja">
     <div class="container">

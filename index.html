@@ -566,6 +566,31 @@ img {
   max-width: 100%;
   height: auto;
 }
+.btn-add-cart {
+  background-color: #8B0000;   /* merah gelap – kontras tinggi */
+  color: #FFFFFF;             /* putih = rasio 12.6:1 */
+  border: 2px solid #5A0000;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/* Hover */
+.btn-add-cart:hover {
+  background-color: #A30000;
+  color: #FFFFFF;
+}
+
+/* Fokus keyboard (WAJIB untuk a11y) */
+.btn-add-cart:focus-visible {
+  outline: 3px solid #FFD700;
+  outline-offset: 3px;
+}
+
+/* Aktif */
+.btn-add-cart:active {
+  background-color: #5A0000;
+}
 
     </style>
 </head>
@@ -576,7 +601,7 @@ img {
             <a class="navbar-brand" href="#">
                 Roti Senja <span style="color: var(--accent-red)">Jakarta</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: 2px solid var(--text-pencil);">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: 2px solid var(--text-pencil);"> 
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -640,11 +665,13 @@ img {
                 <p>Isian coklat lumer dengan adonan roti jadul yang padat tapi lembut.</p>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <span class="price-tag">Rp 12.000</span>
-                    <button class="btn p-0" style="color: var(--accent-red);" 
-                      onclick="addToCart('Roti Coklat Klasik',12000)" 
-                      data-bs-toggle="modal" data-bs-target="#cartModal">
-                      + Keranjang
-                    </button>
+                   <button class="btn btn-add-cart"
+        aria-label="Tambahkan Roti Coklat Klasik ke keranjang"
+        onclick="addToCart('Roti Coklat Klasik',12000)"
+        data-bs-toggle="modal"
+        data-bs-target="#cartModal">
+  + Keranjang
+</button>
                 </div>
             </div>
         </div>
@@ -658,11 +685,13 @@ img {
                 <p>Taburan keju cheddar melimpah luar dalam. Gurihnya pas!</p>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <span class="price-tag">Rp 15.000</span>
-                    <button class="btn p-0" style="color: var(--accent-red);" 
-                      onclick="addToCart('Roti Keju Gondrong',15000)" 
-                      data-bs-toggle="modal" data-bs-target="#cartModal">
-                      + Keranjang
-                    </button>
+                   <button class="btn btn-add-cart"
+        aria-label="Tambahkan Roti Coklat Klasik ke keranjang"
+        onclick="addToCart('Roti Coklat Klasik',12000)"
+        data-bs-toggle="modal"
+        data-bs-target="#cartModal">
+  + Keranjang
+</button>
                 </div>
             </div>
         </div>
@@ -676,11 +705,13 @@ img {
                 <p>Selai srikaya buatan sendiri dengan pandan asli. Wangi banget.</p>
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <span class="price-tag">Rp 14.000</span>
-                    <button class="btn p-0" style="color: var(--accent-red);" 
-                      onclick="addToCart('Srikaya Pandan',14000)" 
-                      data-bs-toggle="modal" data-bs-target="#cartModal">
-                      + Keranjang
-                    </button>
+                   <button class="btn btn-add-cart"
+        aria-label="Tambahkan Roti Coklat Klasik ke keranjang"
+        onclick="addToCart('Roti Coklat Klasik',12000)"
+        data-bs-toggle="modal"
+        data-bs-target="#cartModal">
+  + Keranjang
+</button>
                 </div>
             </div>
         </div>

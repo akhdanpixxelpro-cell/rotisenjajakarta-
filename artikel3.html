@@ -67,6 +67,81 @@
                         <p class="mt-4 fw-bold">Salam dari Dapur,<br>Tim Roti Senja</p>
                     </div>
 
+                    <section class="faq-section mt-5">
+  <h2 class="hand-font text-center mb-4">FAQ — Gandum Lokal Roti Senja</h2>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apa itu gandum lokal yang digunakan Roti Senja?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Gandum lokal adalah gandum yang ditanam dan dipanen oleh petani di dataran tinggi Indonesia, lalu digiling secara tradisional menjadi tepung berkualitas tinggi.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apa bedanya dengan tepung gandum impor?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Gandum lokal memiliki aroma lebih earthy dan karakter rasa yang lebih kuat dibandingkan tepung impor yang biasanya lebih netral.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Kenapa Roti Senja memilih gandum lokal?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Selain mendukung petani Indonesia, gandum lokal memberi rasa yang lebih hangat dan autentik pada setiap roti yang kami panggang.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apakah gandum lokal lebih sehat?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Karena digiling dengan metode stone-ground, banyak nutrisi alami gandum tetap terjaga, sehingga lebih ramah untuk pencernaan.</p>
+    </div>
+  </div>
+
+</section>
+
+                     <!-- ARTIKEL TERKAIT -->
+<div class="related-posts mt-5">
+    <h3 class="hand-font text-center mb-4">Artikel Terkait</h3>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <a href="artikel6.html" class="related-card wobbly-box p-3 d-block">
+                <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&q=80&w=1000" class="img-fluid mb-3">
+                <h5 class="hand-font">Proses "tidur" adonan yang membuat rasa lebih kaya</h5>
+                <p>Kenapa rasa roti kami beda? Inilah rahasia fermentasi alami kami.</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="artikel5.html" class="related-card wobbly-box p-3 d-block">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1000" class="img-fluid mb-3">
+                <h5 class="hand-font">Teman Makan Roti - Blog Roti Senja</h5>
+                <p>Untuk kenangan teman dan rasa yang selalu pulang.</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="artikel4.html" class="related-card wobbly-box p-3 d-block">
+                <img src="img/rotisenj.jpeg" class="img-fluid mb-3">
+                <h5 class="hand-font">Senja adalah waktu transisi antara lelah dan hangatnya rumah</h5>
+                <p>Senja lokal roti Indonesia terbaik untuk roti anak bangsa.</p>
+            </a>
+        </div>
+
                     <div class="mt-5 pt-4 border-top border-dark text-center">
                         <p class="mb-3">Sebarkan semangat lokal!</p>
                         <a href="#" class="social-circle">WA</a>
@@ -78,6 +153,13 @@
             </div>
         </div>
     </div>
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+</script>
 
     <style>
         /* MASTER STYLE - ROTI SENJA JAKARTA 
@@ -270,6 +352,86 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
     
     .btn-senja { width: 100%; text-align: center; margin-bottom: 10px; }
 }
+.related-card {
+    background: #fffdf7;
+    border: 2px solid var(--text-pencil);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.related-card:hover {
+    transform: rotate(-1deg) scale(1.05);
+    box-shadow: 4px 4px 0 #000;
+}
+
+.related-card img {
+    border-radius: 6px;
+}
+.faq-section {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-box {
+  border: 2px dashed var(--text-pencil);
+  border-radius: 14px;
+  margin-bottom: 15px;
+  background: #fffdf5;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+.faq-box.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-box.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+}
+
     </style>
 
         <footer class="footer-senja">

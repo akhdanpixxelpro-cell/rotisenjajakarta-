@@ -67,6 +67,80 @@
                         
                         <p class="mt-4 fw-bold">Salam Wangi Roti,<br>Dapur Roti Senja</p>
                     </div>
+<section class="faq-section mt-5">
+  <h2 class="hand-font text-center mb-4">FAQ — Proses Tidur Adonan</h2>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apa yang dimaksud dengan “tidur” adonan?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>“Tidur” adonan adalah proses fermentasi, di mana adonan dibiarkan beristirahat agar ragi dapat bekerja dan membentuk rasa serta tekstur.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Kenapa adonan tidak langsung dipanggang?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Jika langsung dipanggang, roti akan terasa padat dan hambar. Waktu istirahat membuat roti lebih ringan dan aromanya lebih dalam.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apakah semakin lama semakin enak?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Sampai batas tertentu, ya. Fermentasi yang cukup akan menghasilkan rasa yang kompleks tanpa membuat roti menjadi asam.</p>
+    </div>
+  </div>
+
+  <div class="faq-box">
+    <button class="faq-question">
+      Apakah semua roti Roti Senja melalui proses ini?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      <p>Ya. Semua adonan kami diberi waktu istirahat agar kualitas rasa dan tekstur tetap terjaga.</p>
+    </div>
+  </div>
+
+</section>
+
+ <!-- ARTIKEL TERKAIT -->
+<div class="related-posts mt-5">
+    <h3 class="hand-font text-center mb-4">Artikel Terkait</h3>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <a href="artikel2.html" class="related-card wobbly-box p-3 d-block">
+                <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&q=80&w=1000" class="img-fluid mb-3">
+                <h5 class="hand-font">Roti Senja Kini Hadir di Pasar Santa!</h5>
+                <p>Kenapa rasa roti kami beda? Inilah rahasia fermentasi alami kami.</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="artikel3.html" class="related-card wobbly-box p-3 d-block">
+                <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?auto=format&fit=crop&q=80&w=1000" class="img-fluid mb-3">
+                <h5 class="hand-font">Mengenal Gandum Lokal Pilihan Roti Senja</h5>
+                <p>Kenapa rasa roti kami beda? Intip perjalanan kami mencari bahan baku terbaik langsung dari petani lokal.</p>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="artikel1.html" class="related-card wobbly-box p-3 d-block">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1000" class="img-fluid mb-3">
+                <h5 class="hand-font">Cara Simpan Roti Agar Tetap Empuk Tanpa Pengawet</h5>
+                <p>Punya sisa roti untuk besok? Jangan asal taruh di meja! Ini rahasia menjaga kelembaban roti alami kam.</p>
+            </a>
+        </div>
 
                     <div class="mt-5 pt-4 border-top border-dark text-center">
                         <p class="mb-3">Bagikan rahasia dapur ini!</p>
@@ -80,6 +154,13 @@
     </div>
 </body>
 </html>
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.classList.toggle("active");
+  });
+});
+</script>
 
     <style>
         /* MASTER STYLE - ROTI SENJA JAKARTA 
@@ -272,6 +353,86 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
     
     .btn-senja { width: 100%; text-align: center; margin-bottom: 10px; }
 }
+.related-card {
+    background: #fffdf7;
+    border: 2px solid var(--text-pencil);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.related-card:hover {
+    transform: rotate(-1deg) scale(1.05);
+    box-shadow: 4px 4px 0 #000;
+}
+
+.related-card img {
+    border-radius: 6px;
+}
+.faq-section {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-box {
+  border: 2px dashed var(--text-pencil);
+  border-radius: 14px;
+  margin-bottom: 15px;
+  background: #fffdf5;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question span {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+.faq-box.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-box.active .faq-question span {
+  transform: rotate(45deg);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .faq-question {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+  }
+}
+
     </style>
 
     <section class="container py-5 text-center">

@@ -67,6 +67,43 @@
                         
                         <p class="mt-4 fw-bold">Salam Wangi Roti,<br>Dapur Roti Senja</p>
                     </div>
+<nav class="toc-box">
+  <h3>Daftar Isi</h3>
+  <ul>
+    <li><a href="#apa-itu">Apa itu proses tidur adonan?</a></li>
+    <li><a href="#kenapa-penting">Kenapa adonan perlu didiamkan?</a></li>
+    <li><a href="#rasa">Pengaruh terhadap rasa & aroma</a></li>
+    <li><a href="#tekstur">Pengaruh terhadap tekstur roti</a></li>
+    <li><a href="#filosofi">Filosofi sabar di dapur Roti Senja</a></li>
+  </ul>
+</nav>
+
+<h3 id="apa-itu" class="hand-font mt-5">Apa itu proses “tidur” adonan?</h3>
+<p>
+Tidur adonan adalah waktu di mana adonan roti dibiarkan beristirahat setelah dicampur. Di saat inilah ragi bekerja perlahan, mengubah gula menjadi gas dan rasa, sehingga adonan menjadi lebih hidup dan kompleks.
+</p>
+
+<h3 id="kenapa" class="hand-font mt-5">Kenapa adonan perlu didiamkan</h3>
+<p>
+Memberi waktu pada adonan membuat gluten mengendur dan ragi bekerja lebih stabil. Tanpa proses ini, roti akan terasa padat, kurang harum, dan kurang lembut.
+</p>
+
+<h3 id="rasa" class="hand-font mt-5">Pengaruh terhadap rasa</h3>
+<p>
+Saat adonan “tidur”, ragi menciptakan senyawa rasa alami. Inilah yang membuat roti terasa sedikit manis, wangi, dan tidak hambar meskipun tanpa banyak gula atau perisa buatan.
+</p>
+
+<h3 id="tekstur" class="hand-font mt-5">Pengaruh terhadap tekstur roti</h3>
+<p>
+Proses istirahat membuat pori-pori roti terbentuk lebih halus dan merata. Hasilnya adalah roti yang empuk di dalam, ringan saat digigit, dan tidak mudah bantat.
+</p>
+
+<h3 id="filosofi" class="hand-font mt-5">Filosofi sabar di dapur Roti Senja</h3>
+<p>
+Di Roti Senja, kami percaya bahwa hal terbaik tidak lahir dari terburu-buru. Seperti adonan yang dibiarkan tidur, rasa yang paling nikmat datang dari proses yang sabar, tenang, dan penuh perhatian.
+</p>
+
+                    
 <section class="faq-section mt-5">
   <h2 class="hand-font text-center mb-4">FAQ — Proses Tidur Adonan</h2>
 
@@ -429,6 +466,128 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
   }
 
   .faq-answer p {
+    font-size: 14px;
+  }
+}
+/* ===============================
+   MOBILE STABILITY FIX — ROTI SENJA
+   Anti Goyang • Anti Geser • 100% WCAG Safe
+================================ */
+
+/* Kunci layar supaya tidak bisa melebar ke samping */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Pastikan semua media tidak pernah lebih lebar dari layar */
+img, svg, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Floating button tidak boleh mendorong layar */
+.fab-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.fab-btn {
+  max-width: 58px;
+  max-height: 58px;
+}
+
+/* ===============================
+   KHUSUS MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  /* Matikan semua efek rotate & geser di HP */
+  .wobbly-box,
+  .related-card,
+  .btn-senja,
+  .social-circle,
+  .blog-date {
+    transform: none !important;
+  }
+
+  .wobbly-box:hover,
+  .related-card:hover,
+  .btn-senja:hover,
+  .social-circle:hover {
+    transform: none !important;
+  }
+
+  /* Kurangi shadow besar yang bikin layout "narik" */
+  .wobbly-box,
+  .related-card,
+  .article-paper,
+  .btn-senja {
+    box-shadow: 2px 2px 0 var(--text-pencil) !important;
+  }
+
+  /* Navbar collapse supaya tidak keluar layar */
+  .navbar-collapse {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Daftar isi tidak boleh mendorong ke samping */
+  .toc-box {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* Artikel kertas tidak boleh keluar frame */
+  .article-paper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+.toc-inline {
+  background: #fffdf0;
+  border-left: 4px solid var(--accent-red);
+  padding: 16px 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.toc-inline ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+}
+
+.toc-inline li {
+  margin-bottom: 8px;
+}
+
+.toc-inline a {
+  color: var(--accent-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.toc-inline a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .toc-inline {
+    padding: 12px 14px;
+  }
+
+  .toc-inline a {
     font-size: 14px;
   }
 }

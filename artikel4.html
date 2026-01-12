@@ -62,6 +62,43 @@
 
     <p class="mt-4 fw-bold">Salam dari Dapur,<br>Tim Roti Senja</p>
 </div>
+<nav class="toc-box">
+  <h3>Daftar Isi</h3>
+  <ul>
+    <li><a href="#makna-senja">Makna senja bagi Roti Senja</a></li>
+    <li><a href="#awal-mula">Awal mula nama Roti Senja</a></li>
+    <li><a href="#waktu-panggang">Kenapa roti dipanggang di sore hari</a></li>
+    <li><a href="#rumah">Rasa “pulang ke rumah” dalam setiap roti</a></li>
+    <li><a href="#filosofi">Filosofi senja dalam dapur kami</a></li>
+  </ul>
+</nav>
+
+<h3 id="makna" class="hand-font mt-5">Apa makna senja bagi Roti Senja?</h3>
+<p>
+Bagi kami, senja bukan sekadar waktu di jam. Senja adalah momen ketika lelah seharian perlahan berganti dengan rasa pulang, hangat, dan tenang. Inilah perasaan yang ingin kami hadirkan di setiap roti yang kami panggang.
+</p>
+
+<h3 id="asal-nama" class="hand-font mt-5">Asal mula nama Roti Senja</h3>
+<p>
+Nama Roti Senja lahir dari kebiasaan memanggang roti di sore hari, saat langit mulai berubah warna dan suasana kota melambat. Kami ingin setiap orang yang membeli roti merasakan jeda kecil dari hiruk pikuk Jakarta.
+</p>
+
+<h3 id="waktu-panggang" class="hand-font mt-5">Kenapa roti dipanggang saat sore</h3>
+<p>
+Kami memanggang roti menjelang senja agar pelanggan mendapatkan roti dalam kondisi paling segar dan harum. Waktu ini juga simbol bahwa roti kami adalah teman terbaik untuk menutup hari dengan perasaan nyaman.
+</p>
+
+<h3 id="rasa-rumah" class="hand-font mt-5">Rasa “pulang ke rumah” dalam roti</h3>
+<p>
+Tekstur lembut, aroma hangat, dan rasa yang menenangkan adalah cara kami menghadirkan perasaan seperti disambut di rumah. Setiap gigitan dibuat untuk memberi rasa aman dan sederhana, seperti menikmati kudapan buatan orang tersayang.
+</p>
+
+<h3 id="filosofi" class="hand-font mt-5">Filosofi senja di dapur kami</h3>
+<p>
+Di dapur Roti Senja, kami percaya bahwa makanan terbaik lahir dari proses yang sabar dan penuh perhatian. Seperti senja, kami tidak terburu-buru — kami memberi waktu agar rasa, aroma, dan tekstur berkembang dengan sempurna.
+</p>
+
+
 <section class="faq-section mt-5">
   <h2 class="hand-font text-center mb-4">FAQ — Filosofi Roti Senja</h2>
 
@@ -158,7 +195,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 });
 </script>
 
-    <style>
+   <style>
         /* MASTER STYLE - ROTI SENJA JAKARTA 
    Theme: Hand-Drawn, Wobbly, & Organic
 */
@@ -425,6 +462,224 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
   }
 
   .faq-answer p {
+    font-size: 14px;
+  }
+}
+/* ===============================
+   DAFTAR ISI (TOC)
+================================ */
+
+.toc-box {
+  background: #fffbe7;
+  border: 2px dashed var(--text-pencil);
+  padding: 24px 28px;
+  border-radius: 18px;
+  margin: 30px 0 50px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.05);
+}
+
+.toc-box h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-family: var(--hand-font);
+}
+
+.toc-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-box li {
+  margin-bottom: 12px;
+}
+
+.toc-box a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent-red);
+  transition: 0.2s ease;
+}
+
+.toc-box a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   ARTIKEL CONTENT
+================================ */
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.article-content h3 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   HEADING HAND FONT
+================================ */
+
+.hand-font {
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 768px) {
+  .toc-box {
+    padding: 16px 18px;
+    margin-bottom: 35px;
+  }
+
+  .toc-box h3 {
+    font-size: 20px;
+  }
+
+  .toc-box a {
+    font-size: 15px;
+  }
+
+  .article-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .article-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* ===============================
+   MOBILE STABILITY FIX — ROTI SENJA
+   Anti Goyang • Anti Geser • 100% WCAG Safe
+================================ */
+
+/* Kunci layar supaya tidak bisa melebar ke samping */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Pastikan semua media tidak pernah lebih lebar dari layar */
+img, svg, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Floating button tidak boleh mendorong layar */
+.fab-container {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.fab-btn {
+  max-width: 58px;
+  max-height: 58px;
+}
+
+/* ===============================
+   KHUSUS MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  /* Matikan semua efek rotate & geser di HP */
+  .wobbly-box,
+  .related-card,
+  .btn-senja,
+  .social-circle,
+  .blog-date {
+    transform: none !important;
+  }
+
+  .wobbly-box:hover,
+  .related-card:hover,
+  .btn-senja:hover,
+  .social-circle:hover {
+    transform: none !important;
+  }
+
+  /* Kurangi shadow besar yang bikin layout "narik" */
+  .wobbly-box,
+  .related-card,
+  .article-paper,
+  .btn-senja {
+    box-shadow: 2px 2px 0 var(--text-pencil) !important;
+  }
+
+  /* Navbar collapse supaya tidak keluar layar */
+  .navbar-collapse {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Daftar isi tidak boleh mendorong ke samping */
+  .toc-box {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  /* Artikel kertas tidak boleh keluar frame */
+  .article-paper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+.toc-inline {
+  background: #fffdf0;
+  border-left: 4px solid var(--accent-red);
+  padding: 16px 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+}
+
+.toc-inline ul {
+  padding-left: 18px;
+  margin: 10px 0 0;
+}
+
+.toc-inline li {
+  margin-bottom: 8px;
+}
+
+.toc-inline a {
+  color: var(--accent-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.toc-inline a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .toc-inline {
+    padding: 12px 14px;
+  }
+
+  .toc-inline a {
     font-size: 14px;
   }
 }

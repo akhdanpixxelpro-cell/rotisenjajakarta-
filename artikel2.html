@@ -68,6 +68,42 @@
                         
                         <p class="mt-4 fw-bold">Salam rindu,<br>Tim Roti Senja</p>
                     </div>
+<nav class="toc-box">
+  <h3>Daftar Isi</h3>
+  <ul>
+    <li><a href="#lokasi">Di mana lokasi Roti Senja?</a></li>
+    <li><a href="#jam-buka">Jam buka di Pasar Santa</a></li>
+    <li><a href="#menu">Menu yang tersedia</a></li>
+    <li><a href="#spesial">Menu spesial Pasar Santa</a></li>
+    <li><a href="#pesan">Cara pesan sebelum datang</a></li>
+  </ul>
+</nav>
+
+<h3 id="lokasi" class="hand-font mt-5">Di mana lokasi Roti Senja?</h3>
+<p>
+Roti Senja kini dapat kamu temukan di Pasar Santa, Jakarta Selatan, tepat di area kuliner yang ramai menjelang sore. Cari booth dengan aroma roti hangat yang baru keluar dari oven — itulah kami.
+</p>
+
+<h3 id="jam-buka" class="hand-font mt-5">Jam buka di Pasar Santa</h3>
+<p>
+Kami mulai memanggang dan melayani pengunjung sejak pukul 15.30 hingga stok roti habis. Waktu senja adalah saat terbaik untuk menikmati roti kami dalam kondisi paling segar.
+</p>
+
+<h3 id="menu" class="hand-font mt-5">Menu yang tersedia</h3>
+<p>
+Di Pasar Santa, kamu bisa menemukan menu favorit seperti Roti Coklat, Roti Keju, Roti Susu, serta Kopi Susu Senja yang menjadi pasangan sempurna untuk roti hangat.
+</p>
+
+<h3 id="spesial" class="hand-font mt-5">Menu spesial Pasar Santa</h3>
+<p>
+Beberapa varian roti dan minuman hanya tersedia khusus di Pasar Santa. Menu ini dibuat dalam jumlah terbatas dan sering berubah, mengikuti inspirasi dapur kami setiap minggu.
+</p>
+
+<h3 id="pesan" class="hand-font mt-5">Cara pesan sebelum datang</h3>
+<p>
+Untuk memastikan menu favoritmu tidak kehabisan, kamu bisa memesan lebih dulu melalui WhatsApp atau Instagram resmi Roti Senja. Kami akan menyiapkannya agar siap diambil saat kamu tiba.
+</p>
+
 
                     <section class="faq-section mt-5">
   <h2 class="hand-font text-center mb-4">FAQ — Roti Senja di Pasar Santa</h2>
@@ -436,6 +472,101 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
 
   .faq-answer p {
     font-size: 14px;
+  }
+}
+/* ===============================
+   DAFTAR ISI (TOC)
+================================ */
+
+.toc-box {
+  background: #fffbe7;
+  border: 2px dashed var(--text-pencil);
+  padding: 24px 28px;
+  border-radius: 18px;
+  margin: 30px 0 50px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.05);
+}
+
+.toc-box h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-family: var(--hand-font);
+}
+
+.toc-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-box li {
+  margin-bottom: 12px;
+}
+
+.toc-box a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent-red);
+  transition: 0.2s ease;
+}
+
+.toc-box a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   ARTIKEL CONTENT
+================================ */
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.article-content h3 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   HEADING HAND FONT
+================================ */
+
+.hand-font {
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 768px) {
+  .toc-box {
+    padding: 16px 18px;
+    margin-bottom: 35px;
+  }
+
+  .toc-box h3 {
+    font-size: 20px;
+  }
+
+  .toc-box a {
+    font-size: 15px;
+  }
+
+  .article-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .article-content h3 {
+    font-size: 20px;
   }
 }
 

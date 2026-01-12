@@ -67,6 +67,42 @@
                         <p class="mt-4 fw-bold">Salam dari Dapur,<br>Tim Roti Senja</p>
                     </div>
 
+                    <nav class="toc-box">
+  <h3>Daftar Isi</h3>
+  <ul>
+    <li><a href="#apa-gandum">Apa itu gandum lokal?</a></li>
+    <li><a href="#kenapa-lokal">Kenapa Roti Senja memilih gandum lokal</a></li>
+    <li><a href="#aroma">Aroma & karakter rasa</a></li>
+    <li><a href="#giling">Proses giling tradisional</a></li>
+    <li><a href="#nutrisi">Manfaat nutrisi gandum lokal</a></li>
+  </ul>
+</nav>
+
+<h3 id="apa-gandum" class="hand-font mt-5">Apa itu gandum lokal?</h3>
+<p>
+Gandum lokal adalah gandum yang ditanam oleh petani di dataran tinggi Indonesia dan diolah menjadi tepung tanpa proses industri berlebihan. Inilah bahan dasar utama yang memberi karakter khas pada roti Roti Senja.
+</p>
+
+<h3 id="kenapa-lokal" class="hand-font mt-5">Kenapa Roti Senja memilih gandum lokal</h3>
+<p>
+Kami memilih gandum lokal karena kualitas rasanya yang lebih hangat dan autentik. Selain itu, penggunaan gandum lokal membantu mendukung petani Indonesia dan ekosistem pertanian yang lebih berkelanjutan.
+</p>
+
+<h3 id="aroma" class="hand-font mt-5">Aroma & karakter rasa</h3>
+<p>
+Tepung gandum lokal memiliki aroma tanah yang lembut dan rasa yang lebih berlapis. Inilah yang membuat roti Roti Senja terasa lebih dalam, tidak hambar, dan lebih memuaskan saat digigit.
+</p>
+
+<h3 id="giling" class="hand-font mt-5">Proses giling tradisional</h3>
+<p>
+Gandum kami digiling menggunakan metode stone-ground secara perlahan. Proses ini menjaga nutrisi dan minyak alami gandum tetap utuh, menghasilkan tepung yang lebih hidup dan mudah dicerna.
+</p>
+
+<h3 id="nutrisi" class="hand-font mt-5">Manfaat nutrisi gandum lokal</h3>
+<p>
+Karena tidak mengalami pemrosesan berlebihan, gandum lokal mempertahankan serat, mineral, dan vitamin alaminya. Ini membuat roti lebih ramah bagi tubuh dan memberi energi yang lebih stabil.
+</p>
+
                     <section class="faq-section mt-5">
   <h2 class="hand-font text-center mb-4">FAQ — Gandum Lokal Roti Senja</h2>
 
@@ -429,6 +465,101 @@ h1, h2, h3, h4, .navbar-brand, .hand-font {
 
   .faq-answer p {
     font-size: 14px;
+  }
+}
+/* ===============================
+   DAFTAR ISI (TOC)
+================================ */
+
+.toc-box {
+  background: #fffbe7;
+  border: 2px dashed var(--text-pencil);
+  padding: 24px 28px;
+  border-radius: 18px;
+  margin: 30px 0 50px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.05);
+}
+
+.toc-box h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  font-family: var(--hand-font);
+}
+
+.toc-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-box li {
+  margin-bottom: 12px;
+}
+
+.toc-box a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent-red);
+  transition: 0.2s ease;
+}
+
+.toc-box a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+
+/* ===============================
+   ARTIKEL CONTENT
+================================ */
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.article-content h3 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+
+/* ===============================
+   HEADING HAND FONT
+================================ */
+
+.hand-font {
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 0.5px;
+}
+
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 768px) {
+  .toc-box {
+    padding: 16px 18px;
+    margin-bottom: 35px;
+  }
+
+  .toc-box h3 {
+    font-size: 20px;
+  }
+
+  .toc-box a {
+    font-size: 15px;
+  }
+
+  .article-content p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .article-content h3 {
+    font-size: 20px;
   }
 }
 

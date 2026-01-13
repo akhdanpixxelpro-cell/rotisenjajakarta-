@@ -755,14 +755,22 @@ img {
            <div class="col-md-6 text-center">
   <div class="wobbly-box p-3 d-inline-block" style="transform: rotate(2deg);">
 
-    <img 
+    <img
   src="img/senja.webp"
+  srcset="
+    img/senja.webp 400w,
+    img/senja.webp 800w,
+    img/senja.webp 1200w
+  "
+  sizes="(max-width: 768px) 90vw, 400px"
   alt="Roti Senja Jakarta"
-  width="1200"
-  height="800"
+  width="400"
+  height="267"
+  class="img-fluid"
   fetchpriority="high"
   loading="eager"
 >
+
   </div>
             </div>
         </div>

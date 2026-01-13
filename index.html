@@ -592,6 +592,112 @@ img {
   background-color: #5A0000;
 }
 
+/* =========================
+   HERO MOBILE 100%
+========================= */
+@media (max-width: 768px) {
+
+.hero-mobile {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-paper);
+  overflow: hidden;
+}
+
+.hero-wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gambar */
+.hero-img {
+  width: 100%;
+  height: 48vh;
+  overflow: hidden;
+}
+
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text area */
+.hero-text {
+  flex: 1;
+  padding: 22px 18px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Badge */
+.hero-badge {
+  background: var(--post-it-yellow);
+  border: 2px solid var(--text-pencil);
+  display: inline-block;
+  padding: 6px 14px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-radius: 999px;
+}
+
+/* Title */
+.hero-text h1 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.hero-text h1 span {
+  color: var(--accent-red);
+}
+
+/* Paragraph */
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto 22px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a {
+  background: white;
+  border: 2px solid var(--text-pencil);
+  padding: 12px 22px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--text-pencil);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--text-pencil);
+}
+
+.hero-buttons a.secondary {
+  background: var(--muted-paper);
+}
+
+/* MATIKAN GOYANG */
+.hero-mobile * {
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+}
+
+
     </style>
 </head>
 <body>
